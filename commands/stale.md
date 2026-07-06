@@ -15,4 +15,6 @@ Audit whether this repo's documentation still matches reality. This is a **repor
 
 4. **Report back, don't fix.** For each "wrong" or "missing" item: cite the doc file + line, cite the code evidence that contradicts or is missing from it, and give a one-line suggested correction. Group by file. If everything checks out, say so plainly — don't invent nitpicks to justify the audit.
 
-If the user wants the drift actually fixed, that's a separate, explicit follow-up — this command's job is only to surface the truth.
+5. **Write the findings to `.claude-stale-report.md` in the repo root**, grouped by doc file, same content as the chat report (skip this file entirely if there were zero findings). If the repo has a `.gitignore` and doesn't already ignore this filename, add a line for it — this file is a working artifact, not something to commit.
+
+If the user wants the drift actually fixed, run `/refresh` — it consumes this report so the fix pass doesn't need to redo the audit.

@@ -8,3 +8,4 @@ Applies to every project on this machine (not just one specific repo). Specific 
 - `/implementation` — implement a feature/task from a description: explores the project, fleshes out the ask, implements it in iterations, and verifies the result. Works in any repo (`~/.claude/commands/implementation.md`).
 - `/fix` — fix a described bug: reproduce it, find the root cause, fix it minimally, verify no regressions. Works in any repo (`~/.claude/commands/fix.md`).
 - `/stale` — audit whether CLAUDE.md/README/spec docs still match the actual code; reports drift, changes nothing. Works in any repo (`~/.claude/commands/stale.md`).
+- `/refresh` — fixes the drift `/stale` found: edits the docs to match reality. Works in any repo (`~/.claude/commands/refresh.md`).
