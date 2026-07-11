@@ -11,6 +11,12 @@ Personal [Claude Code](https://claude.com/claude-code) slash commands, shared in
 - **`/refresh`** — the fix-it counterpart to `/stale`: reads `.claude-stale-report.md` and edits the docs to match reality, matching the existing style, then deletes the report. Refuses to run (and asks you to run `/stale` first) if there's no report to work from.
 - **`/uidesign`** — installs the taste, redesign, and ui-ux-pro-max design skills into this project's `.claude/skills/` (project scope, non-interactive).
 - **`/list`** — lists the available custom slash commands with a one-sentence summary of each, pulled from their frontmatter `description`.
+- **`/review`** — reviews the current branch or working-tree changes against a target branch for bugs, regressions, edge cases, missing tests, and maintainability issues. Report-only, like `/stale` — it never edits anything.
+- **`/test`** — takes a description of functionality (`/test <what to cover>`), inspects the project's existing testing setup, adds or improves tests to match, runs the suite, and reports any remaining coverage gaps.
+- **`/commit`** — inspects the current changes, splits unrelated work into separate logical commits when appropriate, and writes clear commit messages in the repo's existing style. Never pushes unless explicitly asked.
+- **`/refactor`** — takes a description of what to refactor (`/refactor <what>`), identifies the existing invariants first, restructures the code incrementally without changing behavior, and verifies with tests at each step.
+- **`/security`** — audits the described code or current changes (`/security [what]`) for auth gaps, input validation, secret exposure, dependency risk, and other OWASP-class vulnerabilities. Report-only by default; only fixes if explicitly asked.
+- **`/prompt`** — takes a rough idea (`/prompt <idea>`, e.g. "redesign my landing page"), explores the project just enough to ground it in specifics, and outputs a single detailed, copy-pasteable prompt for another command like `/implementation` or `/fix`. Never does the work itself.
 
 `CLAUDE.md` is the global instructions file this setup uses to point Claude Code at the available commands.
 
@@ -23,4 +29,4 @@ cp commands/*.md ~/.claude/commands/
 cp CLAUDE.md ~/.claude/CLAUDE.md   # or merge into your existing global CLAUDE.md
 ```
 
-Commands are then available as `/release`, `/implementation`, `/fix`, `/stale`, `/refresh`, `/uidesign`, and `/list` in any repo.
+Commands are then available as `/release`, `/implementation`, `/fix`, `/stale`, `/refresh`, `/uidesign`, `/list`, `/review`, `/test`, `/commit`, `/refactor`, `/security`, and `/prompt` in any repo.
