@@ -1,11 +1,11 @@
 ---
-description: "Turn a rough idea into a detailed, project-grounded prompt you can copy into /implementation, /fix, or any other command. Does not do the task itself."
+description: "Turn a rough idea into a detailed, project-grounded prompt you can copy into /implement, /fix, or any other command. Does not do the task itself."
 argument-hint: "<rough idea, e.g. \"redesign my landing page\">"
 ---
 
 Turn this rough idea into a detailed prompt: $ARGUMENTS
 
-This command never implements anything — it only researches enough to write a sharp, specific prompt, then hands it back for you to paste elsewhere (e.g. `/implementation <prompt>`, `/fix <prompt>`, or run as-is). Follow these steps:
+This command never implements anything — it only researches enough to write a sharp, specific prompt, then hands it back for you to paste elsewhere (e.g. `/implement <prompt>`, `/fix <prompt>`, or run as-is). Follow these steps:
 
 1. **Parse the intent.** Figure out what kind of task this is (new feature, redesign, bug fix, refactor, etc.) — that shapes which command the output prompt is meant for, and what detail matters.
 
@@ -23,4 +23,4 @@ This command never implements anything — it only researches enough to write a 
    - Explicit constraints (what must not change/break)
    - Anything flagged as ambiguous in step 3
 
-5. **Output only the prompt**, in a copy-pasteable block, prefixed with a one-line note on which command it's meant for (e.g. "Paste into `/implementation`:"). Don't pad it with your own commentary about the project outside of what belongs in the prompt itself.
+5. **Output only the prompt**, in a copy-pasteable block, prefixed with a one-line note on which command it's meant for (e.g. "Paste into `/implement`:"). Don't pad it with your own commentary about the project outside of what belongs in the prompt itself.

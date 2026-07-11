@@ -4,7 +4,7 @@ description: Fix a described bug — reproduce it, find the root cause, fix it m
 
 Fix this bug: $ARGUMENTS
 
-This is different from `/implementation`: you are not building something new, you are removing a defect with the smallest change that actually fixes it. Follow these steps:
+This is different from `/implement`: you are not building something new, you are removing a defect with the smallest change that actually fixes it. Follow these steps:
 
 1. **Understand the report.** If given an error message/stack trace, locate exactly where it fires in the code and read the surrounding logic. If given a description ("X does Y when it should do Z"), find the code path responsible. Don't start editing yet.
 

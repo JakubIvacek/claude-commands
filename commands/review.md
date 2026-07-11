@@ -5,7 +5,7 @@ argument-hint: "[target-branch] (default: main)"
 
 Review this diff: $ARGUMENTS
 
-This is a report-only review: you never edit code, add tests, or fix anything here — that's `/fix` or `/implementation`'s job. Follow these steps:
+This is a report-only review: you never edit code, add tests, or fix anything here — that's `/fix` or `/implement`'s job. Follow these steps:
 
 1. **Determine the diff.** If a target branch is given in `$ARGUMENTS`, use it; otherwise default to the repo's main branch (check `main`/`master`, or the default branch via `gh repo view --json defaultBranchRef` if unsure). Diff the current branch against it with `git diff <target>...HEAD`. If there are also uncommitted working-tree changes, include those too and say so in the report.
 
