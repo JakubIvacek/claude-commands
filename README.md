@@ -10,6 +10,7 @@ Personal [Claude Code](https://claude.com/claude-code) slash commands, shared in
 - **`/stale`** — audits whether `CLAUDE.md`/`README`/spec docs still match the actual code: checks each factual claim against the codebase and reports what's wrong or missing, grouped by file, and writes the findings to `.claude-stale-report.md`. Report-only — it never edits anything.
 - **`/refresh`** — the fix-it counterpart to `/stale`: reads `.claude-stale-report.md` and edits the docs to match reality, matching the existing style, then deletes the report. Refuses to run (and asks you to run `/stale` first) if there's no report to work from.
 - **`/uidesign`** — installs the taste, redesign, and ui-ux-pro-max design skills into this project's `.claude/skills/` (project scope, non-interactive).
+- **`/list`** — lists the available custom slash commands with a one-sentence summary of each, pulled from their frontmatter `description`.
 
 `CLAUDE.md` is the global instructions file this setup uses to point Claude Code at the available commands.
 
@@ -22,4 +23,4 @@ cp commands/*.md ~/.claude/commands/
 cp CLAUDE.md ~/.claude/CLAUDE.md   # or merge into your existing global CLAUDE.md
 ```
 
-Commands are then available as `/release`, `/implementation`, `/fix`, `/stale`, `/refresh`, and `/uidesign` in any repo.
+Commands are then available as `/release`, `/implementation`, `/fix`, `/stale`, `/refresh`, `/uidesign`, and `/list` in any repo.
