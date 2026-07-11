@@ -24,9 +24,18 @@ Personal [Claude Code](https://claude.com/claude-code) slash commands, shared in
 
 Copy the files into your global Claude Code config directory:
 
+**Linux/macOS:**
+
 ```sh
 cp commands/*.md ~/.claude/commands/
 cp CLAUDE.md ~/.claude/CLAUDE.md   # or merge into your existing global CLAUDE.md
+```
+
+**Windows (PowerShell):**
+
+```powershell
+Copy-Item commands\*.md "$env:USERPROFILE\.claude\commands\"
+Copy-Item CLAUDE.md "$env:USERPROFILE\.claude\CLAUDE.md"   # or merge into your existing global CLAUDE.md
 ```
 
 Commands are then available as `/release`, `/implementation`, `/fix`, `/stale`, `/refresh`, `/uidesign`, `/list`, `/review`, `/test`, `/commit`, `/refactor`, `/security`, and `/prompt` in any repo.
